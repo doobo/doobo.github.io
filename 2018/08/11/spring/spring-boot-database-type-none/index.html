@@ -1,0 +1,1255 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="排查    Cannot determine embedded database driver class for database type NONE, 博客">
+    <meta name="description" content="网络资源整理,短网址生成,优秀资源推荐,生活杂谈,盘它">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>排查    Cannot determine embedded database driver class for database type NONE | 河蟹堡</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/5.11.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css?t=1586254252573">
+    <link rel="stylesheet" type="text/css" href="/css/my.css?t=1586254252573">
+
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <!---->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">河蟹堡</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/favicon.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">河蟹堡</div>
+        <div class="logo-desc">
+            
+            网络资源整理,短网址生成,优秀资源推荐,生活杂谈,盘它
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://5fu8.com/api/jump.html?code=c7d5027cdd485eb2" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #C3A;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://5fu8.com/api/jump.html?code=c7d5027cdd485eb2" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.staticfile.org/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <a class="a_index title" target="_blank">
+                    <h1 class="description center-align post-title">排查    Cannot determine embedded database driver class for database type NONE</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/tocbot/4.10.1/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/spring/">
+                                <span class="chip bg-color">spring</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/编程/" class="post-category">
+                                编程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2018-08-11
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>这个demo来说明怎么一步步排查一个常见的spring boot AutoConfiguration的错误。</p>
+<p><a href="https://github.com/hengyunabc/spring-boot-inside/tree/master/demo-database-type-NONE" target="_blank" rel="noopener">https://github.com/hengyunabc/spring-boot-inside/tree/master/demo-database-type-NONE</a></p>
+<h2 id="调试排查-Cannot-determine-embedded-database-driver-class-for-database-type-NONE-的错误"><a href="#调试排查-Cannot-determine-embedded-database-driver-class-for-database-type-NONE-的错误" class="headerlink" title="调试排查 Cannot determine embedded database driver class for database type NONE 的错误"></a>调试排查 Cannot determine embedded database driver class for database type NONE 的错误</h2><p>把工程导入IDE里，直接启动应用，抛出来的异常信息是：</p>
+<pre><code>
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-29 14:26:34.478 ERROR 29736 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   :
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+</code></pre><p>其实这时有两个思路，直接google搜索<code>Cannot determine embedded database driver class for database type NONE</code>，就可以找到解决办法。</p>
+<p>第二种方式，仔细查看日志内容，可以发现有<code>To display the auto-configuration report re-run your application with 'debug' enabled.</code>。</p>
+<p>搜索下这个，就可以在spring的官方网站上找到相关的信息：<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-auto-configuration.html" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-auto-configuration.html</a></p>
+<p>就是用户只要配置了<code>debug</code>这个开关，就会把<code>auto-configuration</code> 相关的信息打印出来。</p>
+<p>熟悉spring的环境变量注入的话，就可以知道有几种打开这个的方式：</p>
+<ul>
+<li>在<code>args</code>里增加<code>--debug</code></li>
+<li>在application.properties里增加<code>debug=true</code></li>
+<li>通过<code>-Ddebug=true</code></li>
+</ul>
+<h2 id="增加debug开关之后的信息"><a href="#增加debug开关之后的信息" class="headerlink" title="增加debug开关之后的信息"></a>增加<code>debug</code>开关之后的信息</h2><p>增加<code>debug</code>开关之后，可以看到打印出了错误堆栈：</p>
+<pre><code>2017-11-29 14:33:08.776 DEBUG 29907 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : Application failed to start due to an exception
+
+org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+    at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:245) ~[spring-boot-autoconfigure-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+    at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:182) ~[spring-boot-autoconfigure-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+    at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:42) ~[spring-boot-autoconfigure-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+    at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat.dataSource(DataSourceConfiguration.java:53) ~[spring-boot-autoconfigure-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]</code></pre><p>抛出异常的代码是：</p>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+     * Determine the driver to use based on this configuration and the environment.
+     * @return the driver to use
+     * @since 1.4.0
+     */</span>
+    <span class="token keyword">public</span> String <span class="token function">determineDriverClassName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>StringUtils<span class="token punctuation">.</span><span class="token function">hasText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>driverClassName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Assert<span class="token punctuation">.</span><span class="token function">state</span><span class="token punctuation">(</span><span class="token function">driverClassIsLoadable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token string">"Cannot load driver class: "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>driverClassName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>driverClassName<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        String driverClassName <span class="token operator">=</span> null<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>StringUtils<span class="token punctuation">.</span><span class="token function">hasText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            driverClassName <span class="token operator">=</span> DatabaseDriver<span class="token punctuation">.</span><span class="token function">fromJdbcUrl</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDriverClassName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>StringUtils<span class="token punctuation">.</span><span class="token function">hasText</span><span class="token punctuation">(</span>driverClassName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            driverClassName <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>embeddedDatabaseConnection<span class="token punctuation">.</span><span class="token function">getDriverClassName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>StringUtils<span class="token punctuation">.</span><span class="token function">hasText</span><span class="token punctuation">(</span>driverClassName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">DataSourceBeanCreationException</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>embeddedDatabaseConnection<span class="token punctuation">,</span>
+                    <span class="token keyword">this</span><span class="token punctuation">.</span>environment<span class="token punctuation">,</span> <span class="token string">"driver class"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> driverClassName<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以看出来是没有找到 DataSource 的driver class，然后抛出了 <code>DataSourceBeanCreationException</code>。</p>
+<p>那么一种解决办法是，在maven依赖里加入一些 DataSource driver class。</p>
+<p>但是应用自己的代码里并没有使用DataSource，哪里导致spring boot要创建一个DataSource对象？</p>
+<h2 id="哪里导致spring-boot要创建DataSource"><a href="#哪里导致spring-boot要创建DataSource" class="headerlink" title="哪里导致spring boot要创建DataSource"></a>哪里导致spring boot要创建DataSource</h2><p>从异常栈上，可以找到<code>DataSourceConfiguration$Tomcat</code> 这个类，那么查找下它的引用，可以发现它是被<code>org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.PooledDataSourceConfiguration</code> import引入的。</p>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token annotation punctuation">@Configuration</span>
+    <span class="token annotation punctuation">@Conditional</span><span class="token punctuation">(</span>PooledDataSourceCondition<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ConditionalOnMissingBean</span><span class="token punctuation">(</span><span class="token punctuation">{</span> DataSource<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> XADataSource<span class="token punctuation">.</span><span class="token keyword">class</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@Import</span><span class="token punctuation">(</span><span class="token punctuation">{</span> DataSourceConfiguration<span class="token punctuation">.</span>Tomcat<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> DataSourceConfiguration<span class="token punctuation">.</span>Hikari<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+            DataSourceConfiguration<span class="token punctuation">.</span>Dbcp<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> DataSourceConfiguration<span class="token punctuation">.</span>Dbcp2<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+            DataSourceConfiguration<span class="token punctuation">.</span>Generic<span class="token punctuation">.</span><span class="token keyword">class</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">protected</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">PooledDataSourceConfiguration</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>那么 <code>PooledDataSourceConfiguration</code> 是怎么生效的呢？从代码上可以看到<code>@Conditional(PooledDataSourceCondition.class)</code>。</p>
+<p>那么再看<code>PooledDataSourceCondition</code>的具体实现：</p>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+     * {@link AnyNestedCondition} that checks that either {@code spring.datasource.type}
+     * is set or {@link PooledDataSourceAvailableCondition} applies.
+     */</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">PooledDataSourceCondition</span> <span class="token keyword">extends</span> <span class="token class-name">AnyNestedCondition</span> <span class="token punctuation">{</span>
+
+        <span class="token function">PooledDataSourceCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">super</span><span class="token punctuation">(</span>ConfigurationPhase<span class="token punctuation">.</span>PARSE_CONFIGURATION<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@ConditionalOnProperty</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">"spring.datasource"</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"type"</span><span class="token punctuation">)</span>
+        <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">ExplicitType</span> <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Conditional</span><span class="token punctuation">(</span>PooledDataSourceAvailableCondition<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+        <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">PooledDataSourceAvailable</span> <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>PooledDataSourceCondition</code>引入了<code>@Conditional(PooledDataSourceAvailableCondition.class)</code> ：</p>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+     * {@link Condition} to test if a supported connection pool is available.
+     */</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">PooledDataSourceAvailableCondition</span> <span class="token keyword">extends</span> <span class="token class-name">SpringBootCondition</span> <span class="token punctuation">{</span>
+
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> ConditionOutcome <span class="token function">getMatchOutcome</span><span class="token punctuation">(</span>ConditionContext context<span class="token punctuation">,</span>
+                AnnotatedTypeMetadata metadata<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ConditionMessage<span class="token punctuation">.</span>Builder message <span class="token operator">=</span> ConditionMessage
+                    <span class="token punctuation">.</span><span class="token function">forCondition</span><span class="token punctuation">(</span><span class="token string">"PooledDataSource"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">getDataSourceClassLoader</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> ConditionOutcome
+                        <span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span><span class="token function">foundExactly</span><span class="token punctuation">(</span><span class="token string">"supported DataSource"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> ConditionOutcome
+                    <span class="token punctuation">.</span><span class="token function">noMatch</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span><span class="token function">didNotFind</span><span class="token punctuation">(</span><span class="token string">"supported DataSource"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">atAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">/**
+         * Returns the class loader for the {@link DataSource} class. Used to ensure that
+         * the driver class can actually be loaded by the data source.
+         * @param context the condition context
+         * @return the class loader
+         */</span>
+        <span class="token keyword">private</span> ClassLoader <span class="token function">getDataSourceClassLoader</span><span class="token punctuation">(</span>ConditionContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Class<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">></span> dataSourceClass <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DataSourceBuilder</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">findType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>dataSourceClass <span class="token operator">==</span> null <span class="token operator">?</span> null <span class="token operator">:</span> dataSourceClass<span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>从代码里，可以看到是尝试查找<code>dataSourceClass</code>，如果找到，条件就成立。那么debug下，可以发现查找到的<code>dataSourceClass</code>是：<code>org.apache.tomcat.jdbc.pool.DataSource</code> 。</p>
+<p>那么再看下<code>org.apache.tomcat.jdbc.pool.DataSource</code>这个类是从哪里来的呢？</p>
+<p>从maven依赖树可以看到，依赖是来自：<code>spring-boot-starter-jdbc</code>。所以是应用依赖了<code>spring-boot-starter-jdbc</code>，但是并没有配置<code>DataSource</code>引起的问题。</p>
+<h2 id="问题解决办法"><a href="#问题解决办法" class="headerlink" title="问题解决办法"></a>问题解决办法</h2><p>有两种：</p>
+<ol>
+<li>没有使用到<code>DataSource</code>，则可以把<code>spring-boot-starter-jdbc</code>的依赖去掉，这样就不会触发spring boot相关的代码</li>
+<li>把spring boot自动初始化<code>DataSource</code>相关的代码禁止掉</li>
+</ol>
+<p>禁止的办法有两种：</p>
+<ol>
+<li><p>在main函数上配置exclude</p>
+<pre><code>       @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class })</code></pre></li>
+<li><p>在application.properties里配置：</p>
+<pre><code>       spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration</code></pre></li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol start="0">
+<li>应用没有使用到<code>DataSource</code>，但是在pom.xml里引入了<code>spring-boot-starter-jdbc</code></li>
+<li><code>spring-boot-starter-jdbc</code>带入了<code>tomcat-jdbc</code>，它里面有<code>org.apache.tomcat.jdbc.pool.DataSource</code></li>
+<li>spring boot里的<code>PooledDataSourceConfiguration</code>，判断classpath下面有<code>DataSource</code>的实现类，尝试去创建<code>DataSource</code> bean</li>
+<li>在初始化<code>DataSourceProperties</code>时，尝试通过jdbc的url来探测driver class</li>
+<li>因为应用并没有配置url，所以最终在<code>DataSourceProperties.determineDriverClassName()</code>里抛出<code>Cannot determine embedded database driver class for database type NONE</code></li>
+</ol>
+<p>最后：</p>
+<ul>
+<li>排查spring boot的AutoConfiguration问题时，可以按异常栈，一层层排查<code>Configuration</code>是怎么引入的，再排查<code>Condition</code>具体的判断代码。</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://www.5fu8.com" rel="external nofollow noreferrer">河蟹堡</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info break">
+                    <a class="" href="http://www.5fu8.com/2018/08/11/spring/spring-boot-database-type-none/">http://www.5fu8.com/2018/08/11/spring/spring-boot-database-type-none/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://www.5fu8.com" target="_blank">河蟹堡</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/spring/">
+                                    <span class="chip bg-color">spring</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="qzone,wechat,weibo,douban,qq" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2018/09/10/spring/spring-boot-dubbo-hystrix/" target="_blank">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="快速集成Dubbo + Hystrix">
+                        
+                        <span class="card-title">快速集成Dubbo + Hystrix</span>
+                    </div>
+                </a>
+
+
+                <div class="card-content article-content">
+                    <a class="a_txt" href="/2018/09/10/spring/spring-boot-dubbo-hystrix/" target="_blank">
+                        <div class="summary block-with-text">
+                            
+                                背景Hystrix 旨在通过控制那些访问远程系统、服务和第三方库的节点，从而对延迟和故障提供更强大的容错能力。Hystrix具备拥有回退机制和断路器功能的线程和信号隔离，请求缓存和请求打包，以及监控和配置等功能。
+Dubbo是Alibaba
+                            
+                        </div>
+                    </a>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2018-09-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/编程/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/spring/">
+                        <span class="chip bg-color">spring</span>
+                    </a>
+                    
+                    <a href="/tags/dubbo/">
+                        <span class="chip bg-color">dubbo</span>
+                    </a>
+                    
+                    <a href="/tags/hystrix/">
+                        <span class="chip bg-color">hystrix</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2018/07/21/spring/spring-boot-context/"  target="_blank">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Spring Context的继承关系和影响">
+                        
+                        <span class="card-title">Spring Context的继承关系和影响</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <a class="a_txt" href="/2018/07/21/spring/spring-boot-context/" target="_blank">
+                        <div class="summary block-with-text">
+                            
+                                前言对于一个简单的Spring boot应用，它的spring context是只会有一个。
+
+非web spring boot应用，context是AnnotationConfigApplicationContext
+web spring
+                            
+                        </div>
+                    </a>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-07-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/编程/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/spring/">
+                        <span class="chip bg-color">spring</span>
+                    </a>
+                    
+                    <a href="/tags/context/">
+                        <span class="chip bg-color">context</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/tocbot/4.10.1/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        $tocAside.removeClass(expandedClass).hide();
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+            <div class="col s12 m8 l8 copy-right m12 l12">
+             <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备19063853号-1</a>
+            </span>&nbsp;&copy;
+            <span id="year">2019 – <span id="f_time">2020</span></span>
+            <a href="http://www.5fu8.com" target="_blank">河蟹堡</a>
+            |&nbsp;Powered by&nbsp;<a href="https://5fu8.com/api/jump.html?code=77eae232df0dae89&type=0" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://5fu8.com/api/jump.html?code=5c54590d4bff0953&type=0" target="_blank">Matery</a>
+            
+            
+            
+            
+            
+            
+            <br>
+            
+            <div class="footer-custom">
+                <div style="width:300px;margin:0 auto;padding:5px 0;">
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030602003658"
+                    style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                    <img src="/images/beian.png" style="float:left;">
+                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#ffffff;">粤公网安备 44030602003658号</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div style="display: none">
+                <script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1278650874&web_id=1278650874"></script>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+<script>
+    setTimeout(function () {
+        var year = new Date().getFullYear();
+        $("#f_time").text(year)
+    },100)
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.staticfile.org/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+    <script src="https://cdn.staticfile.org/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="https://cdn.staticfile.org/instant.page/3.0.0/instantpage.min.js" type="module"></script>
+    
+
+</body>
+
+</html>

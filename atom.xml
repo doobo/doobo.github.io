@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>河蟹堡</title>
+  
+  <subtitle>致最好的我们</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.5fu8.com/"/>
+  <updated>2020-04-01T01:49:44.353Z</updated>
+  <id>http://www.5fu8.com/</id>
+  
+  <author>
+    <name>河蟹堡</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis使用概述</title>
+    <link href="http://www.5fu8.com/2020/04/01/tools/redis/"/>
+    <id>http://www.5fu8.com/2020/04/01/tools/redis/</id>
+    <published>2020-04-01T01:46:00.000Z</published>
+    <updated>2020-04-01T01:49:44.353Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Redis概述&quot;&gt;&lt;a href=&quot;#Redis概述&quot; class=&quot;headerlink&quot; title=&quot;Redis概述&quot;&gt;&lt;/a&gt;Redis概述&lt;/h2&gt;&lt;p&gt;Redis 是一个使用 C 语言写成的，开源的 key-value
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.5fu8.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="redis" scheme="http://www.5fu8.com/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ElasticSearch基础知识</title>
+    <link href="http://www.5fu8.com/2020/03/31/java/elasticsearch/"/>
+    <id>http://www.5fu8.com/2020/03/31/java/elasticsearch/</id>
+    <published>2020-03-31T07:54:00.000Z</published>
+    <updated>2020-03-31T09:42:20.975Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;Elasticsearch 是一个基于 Lucene 的搜索引擎。它提供了具有 HTTP Web 界面和无架构 JSON 文档的分布式，多租户能力的全文搜索引擎。Elasticsearch 是用 Java 开发的，根据 Apache
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java多线程和高并发</title>
+    <link href="http://www.5fu8.com/2020/03/30/java/java-many/"/>
+    <id>http://www.5fu8.com/2020/03/30/java/java-many/</id>
+    <published>2020-03-30T06:50:00.000Z</published>
+    <updated>2020-03-31T08:16:19.492Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;volatile&quot;&gt;&lt;a href=&quot;#volatile&quot; class=&quot;headerlink&quot; title=&quot;volatile&quot;&gt;&lt;/a&gt;volatile&lt;/h2&gt;&lt;p&gt; volatile
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zookeeper基本常识</title>
+    <link href="http://www.5fu8.com/2020/03/30/java/zookeeper/"/>
+    <id>http://www.5fu8.com/2020/03/30/java/zookeeper/</id>
+    <published>2020-03-30T05:46:00.000Z</published>
+    <updated>2020-03-30T05:47:24.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;ZooKeeper定义&quot;&gt;&lt;a href=&quot;#ZooKeeper定义&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java常用基础知识</title>
+    <link href="http://www.5fu8.com/2020/03/24/java/java-summary/"/>
+    <id>http://www.5fu8.com/2020/03/24/java/java-summary/</id>
+    <published>2020-03-24T02:32:00.000Z</published>
+    <updated>2020-03-24T03:34:20.807Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;h3 id=&quot;String不可变&quot;&gt;&lt;a href=&quot;#String不可变&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringCloud的5大组件,组件基本介绍</title>
+    <link href="http://www.5fu8.com/2020/03/23/spring/spring-cloud/"/>
+    <id>http://www.5fu8.com/2020/03/23/spring/spring-cloud/</id>
+    <published>2020-03-23T09:32:00.000Z</published>
+    <updated>2020-03-30T08:53:07.507Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;spring cloud 是一系列框架的有序集合。它利用 spring boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用 spring boot
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+      <category term="spring" scheme="http://www.5fu8.com/tags/spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HashMap的结构,1.7和1.8的区别</title>
+    <link href="http://www.5fu8.com/2020/03/23/java/hashmap/"/>
+    <id>http://www.5fu8.com/2020/03/23/java/hashmap/</id>
+    <published>2020-03-23T08:41:00.000Z</published>
+    <updated>2020-03-23T10:57:00.038Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;JDK1-8对HashMap的优化&quot;&gt;&lt;a href=&quot;#JDK1-8对HashMap的优化&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kafka和mq的差异,RabbitMQ和RocketMQ</title>
+    <link href="http://www.5fu8.com/2020/03/23/java/mq-kafka/"/>
+    <id>http://www.5fu8.com/2020/03/23/java/mq-kafka/</id>
+    <published>2020-03-23T06:22:00.000Z</published>
+    <updated>2020-03-23T10:57:00.044Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>超简API图床</title>
+    <link href="http://www.5fu8.com/2020/03/22/tools/img-api/"/>
+    <id>http://www.5fu8.com/2020/03/22/tools/img-api/</id>
+    <published>2020-03-22T09:33:00.000Z</published>
+    <updated>2020-03-30T07:34:27.904Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://5fu8.com/api/jump.html?code=7e8c45cc65819824&amp;amp;type=1&amp;amp;seconds=5&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.5fu8.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="图床" scheme="http://www.5fu8.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows系统安装总结</title>
+    <link href="http://www.5fu8.com/2020/03/17/system/win-install/"/>
+    <id>http://www.5fu8.com/2020/03/17/system/win-install/</id>
+    <published>2020-03-17T12:44:00.000Z</published>
+    <updated>2020-03-23T00:43:11.695Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;站内提示&quot;&gt;&lt;a href=&quot;#站内提示&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="http://www.5fu8.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="windows" scheme="http://www.5fu8.com/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>悲观锁与乐观锁,分布式锁的几种实现</title>
+    <link href="http://www.5fu8.com/2020/03/15/java/lock-cas/"/>
+    <id>http://www.5fu8.com/2020/03/15/java/lock-cas/</id>
+    <published>2020-03-15T08:12:00.000Z</published>
+    <updated>2020-03-23T10:57:00.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;悲观锁与乐观锁&quot;&gt;&lt;a href=&quot;#悲观锁与乐观锁&quot; class=&quot;headerlink&quot; title=&quot;悲观锁与乐观锁&quot;&gt;&lt;/a&gt;悲观锁与乐观锁&lt;/h2&gt;&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://www.5fu8.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSL证书免费申请</title>
+    <link href="http://www.5fu8.com/2019/08/23/system/linux/ssl-apply/"/>
+    <id>http://www.5fu8.com/2019/08/23/system/linux/ssl-apply/</id>
+    <published>2019-08-23T03:06:00.000Z</published>
+    <updated>2020-03-17T12:44:11.828Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Lets-Encrypt证书&quot;&gt;&lt;a href=&quot;#Lets-Encrypt证书&quot; class=&quot;headerlink&quot; title=&quot;Lets Encrypt证书&quot;&gt;&lt;/a&gt;Lets Encrypt证书&lt;/h2&gt;&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="http://www.5fu8.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="ssl" scheme="http://www.5fu8.com/tags/ssl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx简单使用</title>
+    <link href="http://www.5fu8.com/2019/07/23/system/linux/nginx-use/"/>
+    <id>http://www.5fu8.com/2019/07/23/system/linux/nginx-use/</id>
+    <published>2019-07-23T02:39:00.000Z</published>
+    <updated>2020-03-17T12:44:11.825Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="http://www.5fu8.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="nginx" scheme="http://www.5fu8.com/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python提升</title>
+    <link href="http://www.5fu8.com/2019/06/23/code/python-up/"/>
+    <id>http://www.5fu8.com/2019/06/23/code/python-up/</id>
+    <published>2019-06-23T07:55:00.000Z</published>
+    <updated>2020-02-27T07:25:18.328Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;文件读写及系统路径&quot;&gt;&lt;a href=&quot;#文件读写及系统路径&quot; class=&quot;headerlink&quot; title=&quot;文件读写及系统路径&quot;&gt;&lt;/a&gt;文件读写及系统路径&lt;/h2&gt;&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Python" scheme="http://www.5fu8.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用bash命令</title>
+    <link href="http://www.5fu8.com/2019/06/23/system/linux/linux-bash/"/>
+    <id>http://www.5fu8.com/2019/06/23/system/linux/linux-bash/</id>
+    <published>2019-06-23T02:30:00.000Z</published>
+    <updated>2020-03-17T03:06:58.812Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;判断是否有输出文件夹&quot;&gt;&lt;a href=&quot;#判断是否有输出文件夹&quot; class=&quot;headerlink&quot; title=&quot;判断是否有输出文件夹&quot;&gt;&lt;/a&gt;判断是否有输出文件夹&lt;/h2&gt;&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="http://www.5fu8.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="linux" scheme="http://www.5fu8.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux提升</title>
+    <link href="http://www.5fu8.com/2019/06/22/system/linux/linux-up/"/>
+    <id>http://www.5fu8.com/2019/06/22/system/linux/linux-up/</id>
+    <published>2019-06-22T08:29:00.000Z</published>
+    <updated>2020-03-17T03:06:58.806Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;上传下载文件&quot;&gt;&lt;a href=&quot;#上传下载文件&quot; class=&quot;headerlink&quot; title=&quot;上传下载文件&quot;&gt;&lt;/a&gt;上传下载文件&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="http://www.5fu8.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="linux" scheme="http://www.5fu8.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux基础</title>
+    <link href="http://www.5fu8.com/2019/06/22/system/linux/linux-basic/"/>
+    <id>http://www.5fu8.com/2019/06/22/system/linux/linux-basic/</id>
+    <published>2019-06-22T05:29:00.000Z</published>
+    <updated>2020-03-17T03:06:58.803Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="http://www.5fu8.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="linux" scheme="http://www.5fu8.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring配置文件说明,常用反射</title>
+    <link href="http://www.5fu8.com/2019/06/12/spring/spring-basic/"/>
+    <id>http://www.5fu8.com/2019/06/12/spring/spring-basic/</id>
+    <published>2019-06-12T07:04:00.000Z</published>
+    <updated>2020-03-24T03:44:56.246Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;spring-mvc基础知识&quot;&gt;&lt;a href=&quot;#spring-mvc基础知识&quot; class=&quot;headerlink&quot; title=&quot;spring-mvc基础知识&quot;&gt;&lt;/a&gt;spring-mvc基础知识&lt;/h2&gt;&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="spring" scheme="http://www.5fu8.com/tags/spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL使用</title>
+    <link href="http://www.5fu8.com/2019/05/23/system/linux/mysql-use/"/>
+    <id>http://www.5fu8.com/2019/05/23/system/linux/mysql-use/</id>
+    <published>2019-05-23T06:52:00.000Z</published>
+    <updated>2020-03-17T12:44:11.821Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;MySQL基本使用&quot;&gt;&lt;a href=&quot;#MySQL基本使用&quot; class=&quot;headerlink&quot; title=&quot;MySQL基本使用&quot;&gt;&lt;/a&gt;MySQL基本使用&lt;/h2&gt;&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="http://www.5fu8.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="mysql" scheme="http://www.5fu8.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Angular使用</title>
+    <link href="http://www.5fu8.com/2019/05/23/code/angular-use/"/>
+    <id>http://www.5fu8.com/2019/05/23/code/angular-use/</id>
+    <published>2019-05-23T05:33:00.000Z</published>
+    <updated>2020-03-17T04:26:53.589Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;初始化环境&quot;&gt;&lt;a href=&quot;#初始化环境&quot; class=&quot;headerlink&quot; title=&quot;初始化环境&quot;&gt;&lt;/a&gt;初始化环境&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="http://www.5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="angular" scheme="http://www.5fu8.com/tags/angular/"/>
+    
+  </entry>
+  
+</feed>
